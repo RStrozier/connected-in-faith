@@ -8,7 +8,6 @@ function BlogPage() {
   const [entry, setEntry] = useState<Entry<any> | null>(null);
 
   // TODO: MAP THROUGH ENTRY URLS
-  console.log(blogData[0])
   var entryURL = blogData[0]
 
   useEffect(() => {
@@ -25,20 +24,25 @@ function BlogPage() {
   const parsedResponse = JSON.parse(JSON.stringify(entry.fields));
   const { title, blogContent, blogHero } = parsedResponse;
 
-  // testing for spacing but not using yet
-  console.log(blogHero);
+  // Blog hero is console logging right
+  console.log("Blog Hero:", JSON.stringify(blogHero));
 
   return (
     <div> 
       <div className="page-container">
-        <div className="largeContainer">
+        <div className="mediumContainer">
           <div className="mini-spacer"></div>
-          <div className="blog-title">
-            {title}
+          {/* TODO: Map through blog container for blog */}
+          <div className="blog-container">
+            <div className="blog">
+            <div className="blog-title">
+              {title}
+            </div>
+            {/* {blogHero} */}
+            <div className="spacer"></div>
+            {blogContent} 
+            </div>
           </div>
-          {/* {blogHero} */}
-        <div className="spacer"></div>
-        {blogContent} 
         </div>
       </div>
     </div>
