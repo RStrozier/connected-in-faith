@@ -1,10 +1,12 @@
 .footer-container {
-    margin-top: 2rem;
-    border: 1px outset black;
-    background-color: rgb(249, 249, 252);
-}
-
-.cif-title-image {
-    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(246,243,243);
+    background: linear-gradient(180deg, rgba(246,243,243,1) 0%, rgba(246,244,172,1) 69%, rgba(246,244,126,1) 84%);
+  }
+  
+  .cif-title-image {
+    width: 16rem;
     height: auto;
-}
+  }
