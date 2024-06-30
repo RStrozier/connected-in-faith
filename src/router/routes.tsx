@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import { createBrowserRouter } from 'react-router-dom';
 import AboutPage from '../pages/aboutpage/AboutPage';
 import MainVideoPage from '../pages/mainvideopage/MainVideoPage';
+import DonatePage from '../pages/donatepage/DonatePage';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "/blog", element: <BlogPage /> },
       { path: "/aboutCIF", element: <AboutPage />},
+      { path: "/donate", element: <DonatePage />},
       { path: "/videos", element: <MainVideoPage />},
     ]
    }]);

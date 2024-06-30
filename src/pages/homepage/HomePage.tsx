@@ -16,11 +16,11 @@ const HomePage = () => {
       <div className="page-container">
         <div className="largeContainer">
           <div className="spacer"></div>
-          <div className="art-piece highlight-text">
+          <div className="art-piece highlight-text poppins-semibold">
            This is Connected in Faith 
            </div>
           <div className="mini-spacer"></div>
-          <div className="homepage-text-intro">
+          <div className="homepage-text-intro poppins-medium">
             How does it really feel to leave religion, and then come back?
             Well, it's definitelty not easy. From the questions we are
             too scared to ask, to the judgement from others we eventually feel.

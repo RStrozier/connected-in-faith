@@ -4,11 +4,15 @@ import { Entry } from 'contentful';
 import './BlogPage.css';
 import blogData from '../../data/blog.json'
 
+// TODO: GET IMAGES! EITHER PUT IN JSON OR FIGURE OUT HOW TO 
+// PULL FROM THE MEDIA
+
 function BlogPage() {
   const [entry, setEntry] = useState<Entry<any> | null>(null);
 
   // TODO: MAP THROUGH ENTRY URLS
-  var entryURL = blogData[0]
+  // OBJECT.KEYS relates to the JSON object
+  var entryURL = Object.keys(blogData[0])[0];
 
   useEffect(() => {
     client.getEntry(entryURL)

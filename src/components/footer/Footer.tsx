@@ -1,5 +1,5 @@
 import './Footer.css'
-import CIFTitleImage from '../../assets/headline-homepage-title.png'
+import CIFTitleImage from '../../assets/imgs/headline-homepage-title.png'
 
 const Footer = () => {
   return (
