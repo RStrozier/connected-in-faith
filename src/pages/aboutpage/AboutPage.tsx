@@ -2,7 +2,11 @@
 const AboutPage = () => {
   return (
     <>
-      <div>AboutPage</div>
+    <div className="page-container">
+      <div className="largeContainer">
+        <div className="page-header-text poppins-regular">About Page</div>
+      </div>
+    </div>
     </>
   )
 }

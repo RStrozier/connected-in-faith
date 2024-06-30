@@ -1,7 +1,13 @@
 
 const DonatePage = () => {
   return (
-    <div>Donate Page</div>
+    <>
+    <div className="page-container">
+      <div className="largeContainer">
+        <div className="page-header-text poppins-regular">Donate Page</div>
+      </div>
+    </div>
+    </>
   )
 }
 

@@ -35,16 +35,19 @@ function BlogPage() {
     <div> 
       <div className="page-container">
         <div className="mediumContainer">
-          <div className="mini-spacer"></div>
+        <div className="page-header-text poppins-regular">Blog Page</div>
+          <div className="spacer"></div>
           {/* TODO: Map through blog container for blog */}
           <div className="blog-container">
             <div className="blog">
-            <div className="blog-title">
+            <div className="blog-title poppins-semibold">
               {title}
             </div>
             {/* {blogHero} */}
             <div className="spacer"></div>
+            <div className="blog-content poppins-regular">
             {blogContent} 
+            </div>
             </div>
           </div>
         </div>
