@@ -5,5 +5,16 @@
 
 .blog-hero-paragraph,
 .blog-content-paragraph {
-    margin-bottom: .65rem;
+    margin-bottom: 1rem;
+}
+
+.blog-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.read-blog-btn {
+    text-align: center;
+    padding: .5rem;
+    cursor: pointer;
 }

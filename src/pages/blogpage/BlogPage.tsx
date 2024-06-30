@@ -1,10 +1,9 @@
-import { useState, useEffect, JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from 'react';
+import { useState, useEffect, JSXElementConstructor, 
+  ReactElement, ReactNode, ReactPortal } from 'react';
 import client from '../../utilities/Contentful';
 import { Entry } from 'contentful';
 import './BlogPage.css';
 import blogData from '../../data/blog.json'
-
-// TODO: GET IMAGES! EITHER PUT IN JSON OR FIGURE OUT HOW TO 
 
 function BlogPage() {
   const [entry, setEntry] = useState<Entry<any> | null>(null);
@@ -23,24 +22,24 @@ function BlogPage() {
   if (!entry) {
     return <div>Loading...</div>;
   }
-
   // grabbing the entry fields from contentful for blog
   const parsedResponse = JSON.parse(JSON.stringify(entry.fields));
   const { title, blogContext, blogHero } = parsedResponse;
-
-  // Blog hero is console logging right
+  // console logging right
   // console.log("Blog Hero:", JSON.stringify(blogContext));
 
   return (
     <div> 
       <div className="page-container">
         <div className="mediumContainer">
-        <div className="page-header-text poppins-regular">Blog Page</div>
+        <div className="page-header-text poppins-regular">
+          Blog Page</div>
           <div className="spacer"></div>
+
           <div className="blog-container">
             <div className="blog">
               {/* blog title */}
-            <div className="blog-title poppins-semibold">
+            <div className="blog-title poppins-bold">
               {title}
             </div>
             <div className="spacer"></div>
@@ -55,13 +54,23 @@ function BlogPage() {
                   Iterable<ReactNode> | ReactPortal | null | undefined; }[]; }, 
                   index: number) => (
                   <p key={index} 
-                  className="blog-hero-paragraph poppins-regular">
+                  className="blog-hero-paragraph poppins-semibold">
                     {paragraph.content[0].value}
                   </p>
                 ))}
               </div>
             )}
+
+            {/* TODO: NEED TO SET BUTTON THAT TAKES TO FULL CONTEXT */}
+            {/* TODO: NEED TO CENTER CSS BUTTON HIDE/SHOW */}
+            {/* LINKS TO SINGLE BLOG PAGE */}
+            <div className="blog-btn-container">
+            <button className="read-blog-btn poppins-regular">
+            Read {title}</button>
+            </div>
+
             <div className="spacer"></div>
+
             {/* blog context */}
             {blogContext && (
               <div className="blog-content">

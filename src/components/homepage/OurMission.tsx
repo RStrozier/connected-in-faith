@@ -19,9 +19,17 @@ const OurMission = () => {
         </div>
 
         <div className="mission-statement">
-          <div className="mission-bubble">
+          <div className="mission-bubble art-piece">
             <p className="poppins-regular">
-            This is how I view it Lorem ipsum dolor sit.</p>
+            Christ</p>
+          </div>
+          <div className="mission-bubble art-piece">
+            <p className="poppins-regular">
+            Community</p>
+          </div>
+          <div className="mission-bubble art-piece">
+            <p className="poppins-regular">
+            Church</p>
           </div>
         </div>
       </div>
