@@ -1,5 +1,6 @@
 import './Blog.css'
 import blogData from '../../data/blog.json';
+import imageFrame from '../../assets/imgs/picture-frame.png';
 
 const TopBlogPosts = () => {
   // console logging for testing! 
@@ -17,10 +18,14 @@ const TopBlogPosts = () => {
     {/* blog carsoul or blog design here / utility */}
     <div className="largeContainer">
     <div className="top-blog-container">
-      <div className="top-blog-item"></div>
-      <div className="top-blog-item"></div>
-      <div className="top-blog-item"></div>
-      <div className="top-blog-item"></div>
+      <div className="top-blog-item" 
+      style={{ backgroundImage: `url(${imageFrame})`}}></div>
+      <div className="top-blog-item"
+      style={{ backgroundImage: `url(${imageFrame})`}}></div>
+      <div className="top-blog-item"
+      style={{ backgroundImage: `url(${imageFrame})`}}></div>
+      <div className="top-blog-item"
+      style={{ backgroundImage: `url(${imageFrame})`}}></div>
     </div>
     </div> 
 

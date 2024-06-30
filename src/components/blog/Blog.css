@@ -7,7 +7,9 @@
 
 .top-blog-item {
     width: 99%;
-    height: 20rem;
     border: 1px solid black;
+    height: 22rem;
     background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
 }
