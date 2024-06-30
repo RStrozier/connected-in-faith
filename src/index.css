@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  background-color: rgb(246, 243, 243);
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.page-container {
+  /* setting a min height for small pages */
+  min-height: 90vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+.mediumContainer {
+  width: 66vw;
+  margin: 0 auto;
+}
+
+.largeContainer {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+
+.highlight-text {
+  font-size: 1.2rem;
+  margin-top: .45rem;
+}
+
+.spacer {
+  padding: 1rem;
+}
+
+.mini-spacer {
+  padding: .25rem;
+}

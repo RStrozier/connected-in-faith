@@ -1,0 +1,13 @@
+.top-blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border: 1px solid black;
+}
+
+.top-blog-item {
+    width: 99%;
+    height: 20rem;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}

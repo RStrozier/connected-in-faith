@@ -1,0 +1,33 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    width: 8rem; /* Take up the 1st 1/3 space */
+  }
+  
+  .navbar-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 33.33%; /* Take up the 2nd 1/3 space */
+    display: flex;
+    justify-content: center;
+  }
+  
+.nav-list-link {
+    margin-right: 1rem;
+  }
+
+.nav-list-link:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+  .navbar-icon {
+    width: 33.33%; /* Take up the 3rd 1/3 space */
+    display: flex;
+    justify-content: flex-end;
+  }
