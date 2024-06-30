@@ -1,6 +1,6 @@
 .footer-container {
     margin-top: 2rem;
-    border: 1px solid black;
+    border: 1px outset black;
     background-color: rgb(249, 249, 252);
 }
 
