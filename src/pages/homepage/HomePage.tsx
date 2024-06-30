@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { setupIntersectionObserver } from "../../utilities/IntersectionObserver";
 import "./HomePage.css";
 import TopBlogPosts from "../../components/blog/TopBlogPosts";
+import OurMission from "../../components/homepage/OurMission";
 
 const HomePage = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const HomePage = () => {
         <div className="spacer"></div>
         {/* top blog post component */}
         <TopBlogPosts />
+        <OurMission />
         </div>
       </div>
     </>

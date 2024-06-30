@@ -1,0 +1,38 @@
+.header-circle-container {
+    display: flex;
+}
+
+.small-circle-logo-left {
+    margin-left: 5px;
+}
+
+.small-circle-logo-right {
+    margin-right: 5px;
+}
+
+.mission-statement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mission-bubble {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    background-image: url('../../assets/imgs/mission-background-image.png'); /* Replace with your actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mission-bubble p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    padding: 1rem;
+}

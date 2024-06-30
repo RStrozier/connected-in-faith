@@ -1,15 +1,25 @@
 .top-blog-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     border: 1px solid black;
 }
 
 .top-blog-item {
     width: 99%;
-    border: 1px solid black;
     height: 22rem;
+    /* TODO: can get rid of border and background color once finished */
+    border: 1px solid black;
     background-color: whitesmoke;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+}
+
+.header-circle-container {
+    display: flex;
+}
+
+.small-circle-logo-left {
+    margin-left: 5px;
 }
