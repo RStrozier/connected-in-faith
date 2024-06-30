@@ -1,13 +1,18 @@
 import { useState, useEffect } from 'react';
 import client from '../../utilities/Contentful';
 import { Entry } from 'contentful';
+import './BlogPage.css';
+import blogData from '../../data/blog.json'
 
 function BlogPage() {
   const [entry, setEntry] = useState<Entry<any> | null>(null);
 
-  // get blog title and entry
+  // TODO: MAP THROUGH ENTRY URLS
+  console.log(blogData[0])
+  var entryURL = blogData[0]
+
   useEffect(() => {
-    client.getEntry('url52FIPIPsRMg4s9ejHA')
+    client.getEntry(entryURL)
       .then(entry => setEntry(entry))
       .catch(error => console.error(error));
   }, []);
@@ -18,14 +23,21 @@ function BlogPage() {
 
   // grabbing the entry fields from contentful for blog
   const parsedResponse = JSON.parse(JSON.stringify(entry.fields));
-  const { title, blogContent } = parsedResponse;
+  const { title, blogContent, blogHero } = parsedResponse;
+
+  // testing for spacing but not using yet
+  console.log(blogHero);
 
   return (
     <div> 
       <div className="page-container">
         <div className="largeContainer">
-        {title}
-        <br />
+          <div className="mini-spacer"></div>
+          <div className="blog-title">
+            {title}
+          </div>
+          {/* {blogHero} */}
+        <div className="spacer"></div>
         {blogContent} 
         </div>
       </div>
