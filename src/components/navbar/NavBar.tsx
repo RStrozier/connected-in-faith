@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import { HiMenu } from "react-icons/hi";
 import logo from '../../assets/imgs/connected-in-faith-logo.png'
+import DoubleLine from '../DoubleLine';
 
 const NavBar = () => {
   return (
@@ -28,9 +29,11 @@ const NavBar = () => {
       </ul>
       <div className="navbar-icon">
         {/* TODO: DROP DOWN MENU */}
-      <HiMenu size={36}/>
+      <HiMenu size={42}/>
       </div>
     </div>
+    {/* double line */}
+    <DoubleLine />
     </> 
   )
 }

@@ -42,3 +42,8 @@ body {
 .mini-spacer {
   padding: .25rem;
 }
+
+.two-lines {
+  width: 100%;
+  height: 2.8rem;
+}
