@@ -4,7 +4,7 @@ import "./componenthomepage.css";
 const OurMission = () => {
   return (
     <>
-      <div className="largeContainer">
+      <div className="mediumContainer">
         <div className="spacer"></div>
         <div className="header-circle-container">
           <div className="art-piece">

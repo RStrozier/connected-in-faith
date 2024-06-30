@@ -2,3 +2,8 @@
     text-align: center;
     font-size: 1.45rem;
 }
+
+.blog-hero-paragraph,
+.blog-content-paragraph {
+    margin-bottom: .65rem;
+}

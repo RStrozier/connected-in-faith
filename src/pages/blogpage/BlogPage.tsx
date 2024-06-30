@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from 'react';
 import client from '../../utilities/Contentful';
 import { Entry } from 'contentful';
 import './BlogPage.css';
 import blogData from '../../data/blog.json'
 
 // TODO: GET IMAGES! EITHER PUT IN JSON OR FIGURE OUT HOW TO 
-// PULL FROM THE MEDIA
 
 function BlogPage() {
   const [entry, setEntry] = useState<Entry<any> | null>(null);
@@ -14,6 +13,7 @@ function BlogPage() {
   // OBJECT.KEYS relates to the JSON object
   var entryURL = Object.keys(blogData[0])[0];
 
+  // set the url
   useEffect(() => {
     client.getEntry(entryURL)
       .then(entry => setEntry(entry))
@@ -26,10 +26,10 @@ function BlogPage() {
 
   // grabbing the entry fields from contentful for blog
   const parsedResponse = JSON.parse(JSON.stringify(entry.fields));
-  const { title, blogContent, blogHero } = parsedResponse;
+  const { title, blogContext, blogHero } = parsedResponse;
 
   // Blog hero is console logging right
-  console.log("Blog Hero:", JSON.stringify(blogHero));
+  // console.log("Blog Hero:", JSON.stringify(blogContext));
 
   return (
     <div> 
@@ -37,17 +37,46 @@ function BlogPage() {
         <div className="mediumContainer">
         <div className="page-header-text poppins-regular">Blog Page</div>
           <div className="spacer"></div>
-          {/* TODO: Map through blog container for blog */}
           <div className="blog-container">
             <div className="blog">
+              {/* blog title */}
             <div className="blog-title poppins-semibold">
               {title}
             </div>
-            {/* {blogHero} */}
             <div className="spacer"></div>
-            <div className="blog-content poppins-regular">
-            {blogContent} 
-            </div>
+            {/* blog hero */}
+            {blogHero && (
+              <div className="blog-hero">
+                {blogHero.content.map((paragraph:
+                // this is all the parameters the paragraph could be 
+                // seperating parapgraphs using CSS
+                { content: { value: string | number | boolean 
+                  | ReactElement<any, string | JSXElementConstructor<any>> | 
+                  Iterable<ReactNode> | ReactPortal | null | undefined; }[]; }, 
+                  index: number) => (
+                  <p key={index} 
+                  className="blog-hero-paragraph poppins-regular">
+                    {paragraph.content[0].value}
+                  </p>
+                ))}
+              </div>
+            )}
+            <div className="spacer"></div>
+            {/* blog context */}
+            {blogContext && (
+              <div className="blog-content">
+                {blogContext.content.map((paragraph:
+                { content: { value: string | number | boolean 
+                  | ReactElement<any, string | JSXElementConstructor<any>> | 
+                  Iterable<ReactNode> | ReactPortal | null | undefined; }[]; }, 
+                  index: number) => (
+                  <p key={index} 
+                  className="blog-content-paragraph poppins-regular">
+                    {paragraph.content[0].value}
+                  </p>
+                ))}
+              </div>
+            )}
             </div>
           </div>
         </div>
